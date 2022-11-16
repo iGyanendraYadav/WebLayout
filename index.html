@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Responsive Header</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body class="bg-cyan-500 ">
+      <nav class="bg-white p-5 shadow md:flex md:items-center md:justify-between font-bold">
+        <div class="flex justify-between items-center">
+          <span class="text-2xl  cursor-pointer">
+            <img class="h-7 inline rounded-3xl" src="/p7.jpg" alt="Gyanpur"/>
+            Gyanpur
+          </span>
+          <span class="text-3xl cursor-pointer mx-2 block md:hidden">
+            <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto py-4 md:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500">
+          <li class="mx-4 my-6 md:my-0">
+             <a href="#" class="text-xl hover:text-cyan-500 duration-500">Home</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500">Blog</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500">Services</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500">About</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl hover:text-cyan-500 duration-500">Contact</a>
+          </li>
+          <button class="bg-cyan-400 hover:bg-cyan-500 rounded-xl text-white duration-500 px-6 py-2 mx-4 ">Start A Blog</button>
+        </ul>
+      </nav>
+
+      <div class="content flex flex-col md:flex-row justify-center items-center md:justify-evenly space-y-5 md:space-y-0 md:py-20 py-10">
+        <div class="col h-72 w-52 bg-yellow-300 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-cyan-900 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-blue-500 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-green-500 rounded-xl hover:skew-y-3"></div>
+      </div>
+      <div class="content flex flex-col md:flex-row justify-center items-center md:justify-evenly space-y-5 md:space-y-0 md:py-20 py-0">
+        <div class="col h-72 w-52 bg-purple-300 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-zinc-600 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-orange-900 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-pink-600 rounded-xl hover:skew-y-3"></div>
+      </div>
+      <div class="content flex flex-col md:flex-row justify-center items-center md:justify-evenly space-y-5 md:space-y-0 md:py-20 py-10">
+        <div class="col h-72 w-52 bg-orange-400 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-lime-400 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-teal-200 rounded-xl hover:skew-y-3"></div>
+        <div class="col h-72 w-52 bg-pink-400 rounded-xl hover:skew-y-3"></div>
+      </div>
+
+      <div class="footer bg-slate-800 text-white text-sm md:space-y-2 md:py-20 py-10">
+      <div class="flex flex-col md:flex-row  justify-center items-center md:justify-around md:mx-40">
+        <span><a href="#">Privacy Policy</a></span>
+        <span><a href="#">Legal</a></span>
+        <span><a href="#">Disclaimers</a></span>
+      </div>
+      <span class="flex flex-row justify-center md:justify-around space-x-2 md:space-x-0 md:mx-0">
+          <a href="#">© 2022</a>
+          <a href="#">All Rights Reserved.</a>
+      </span>
+      <div class="flex flex-row justify-center items-center pt-0 md:pt-20 ">
+        <span class="tracking-widest">Designed by <a href="www.gyanendrayadav.com"><b>Gyanendra Yadav</b></a></span>
+      </div>
+    </div>
+      <script>
+        function Menu(e){
+          let list = document.querySelector("ul");
+          e.name === "menu" ? (e.name = "close", list.classList.add("top-[80px]"), list.classList.add("opacity-100")) : (e.name = "menu", list.classList.remove("top-[80px]"), list.classList.remove("opacity-100"))
+        }
+      </script>
+  </body>
+</html>
